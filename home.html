@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Halaman Utama</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="style.css">
+</head>
+<body style="font-family:Verdana;color:#000000;">
+
+<div class="top">
+	<body onload="startTime()">
+	<div style="align:right;">
+		<div id="clockdate">
+			<div class="clockdate-wrapper">
+				<div id="clock"></div>
+				<div id="date"></div>
+			</div>
+		</div>
+	</div>
+	</body>
+	<div style="background-color:cyan;text-align:center;padding:auto;">
+	    <h5 style="color:#0000ff;text-align:center;margin-left:287px;">Dasar-dasar Komputasi</h5>
+	</div>
+    <h1 style="text-align:center;margin-left:287px;">Kuliner Nusantara Khas DKI Jakarta</h1>
+	<div style="background-color:cyan;text-align:center;padding:auto;">
+	    <h5 style="color:#0000ff;text-align:center;margin-left:287px;">Halaman Utama</h5>
+	</div>
+</div>
+
+<div style="overflow:auto">
+    <div class="menu">
+		<a href="home.html">Halaman Utama</a>
+        <a href="tentangkulinerdki.html">Tentang Kuliner Khas DKI Jakarta</a>
+        <a href="pembuatan.html">Proses Pembuatannya </a>
+		<a href="galerikulinerdki.html">Galeri Kuliner Khas DKI Jakarta</a>
+        <a style="float:right;" class="link" href="linksumber.html">Link Sumber</a>
+    </div>
+    <div class="main">
+		<center>
+        <h2>Hi Welcome To My Website!</h2>
+        <p>Website ini adalah Website saya tentang Kuliner Nusantara Khas DKI Jakarta</p>
+		</center>
+	    <table class="tb-center">
+		    <tbody>
+			    <tr>
+				    <td rowspan="3">
+				        <img src="image/gambar_layout_utama.jpg" width="100" height="100">
+		            </td>
+		            <td>NIM</td>
+				    <td>A11.2022.14628</td>
+	            </tr>
+			    <tr>
+			        <td>Nama</td>
+				    <td>Masahiro Benz Soeryo</td>
+			    </tr>
+			    <tr>
+			        <td>Kelompok</td>
+				    <td>A11.4117</td>
+			    </tr>
+		    </tbody>
+	    </table>			
+    </div>
+	<div class="right">
+        <h2>Halaman Utama</h2>
+		<img src="image/gambar_fact.jpg" width="100" height="100">
+        <p>
+			"We are living in a world of fear. 
+			The life of man today is corroded and made bitter by fear: fear of the future, 
+			fear of the hydrogen bomb, fear of ideologies. 
+			Perhaps this fear is a greater danger than the danger itself 
+			because it is fear, which drives men to act thoughtlessly, to act dangerously."
+		</p>
+		<p>
+			-Ir. Soekarno
+		</p>
+    </div>
+</div>
+
+<div class="bottom">Dasar-dasar Komputasi</div>
+
+<script>
+function startTime() {
+    var today = new Date();
+    var hr = today.getHours();
+    var min = today.getMinutes();
+    var sec = today.getSeconds();
+    ap = (hr < 12) ? "<span>AM</span>" : "<span>PM</span>";
+    hr = (hr == 0) ? 12 : hr;
+    hr = (hr > 12) ? hr - 12 : hr;
+    //Add a zero in front of numbers<10
+    hr = checkTime(hr);
+    min = checkTime(min);
+    sec = checkTime(sec);
+    document.getElementById("clock").innerHTML = hr + ":" + min + ":" + sec + " " + ap;
+    
+    var months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+    var days = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+    var curWeekDay = days[today.getDay()];
+    var curDay = today.getDate();
+    var curMonth = months[today.getMonth()];
+    var curYear = today.getFullYear();
+    var date = curWeekDay+", "+curDay+" "+curMonth+" "+curYear;
+    document.getElementById("date").innerHTML = date;
+    
+    var time = setTimeout(function(){ startTime() }, 500);
+}
+function checkTime(i) {
+    if (i < 10) {
+        i = "0" + i;
+    }
+    return i;
+}
+</script>
+
+</body>
+</html>

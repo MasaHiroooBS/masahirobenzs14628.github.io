@@ -1,0 +1,138 @@
+* {
+	box-sizing: border-box;
+}
+
+.top {
+	background: linear-gradient(to right, #0000ff, #ffffff, #0000ff);
+	color: #ff0088;
+	padding: 15px;
+	text-align: center;
+}
+
+.bottom {
+	background: linear-gradient(to right, #0000ff, #00ffff, #0000ff);
+	text-align: center;
+	padding: 15px;
+	margin-top: 7px;
+	color: #0000ff;
+}
+
+.menu {
+	overflow: hidden;
+	background: linear-gradient(to right, #0000ff, #00ffff);
+	margin-top: 5px;
+}
+
+.menu a {
+	float: left;
+	display: block;
+	color: #ffffff;
+	text-align: center;
+	padding: 8px 18px;
+	box-shadow: inset 0 0 0 0 #000000;
+	border-right:1px solid #ffffff;
+	border-left:1px solid #ffffff;
+}
+
+.menu a:hover:not(.link) {
+	box-shadow: inset 0 0 0 50px #000000;
+	color: white;
+	transition: 0.8s;
+}
+
+.menu a:active {
+	background-color: #000000;
+	color: white;
+	transition: 0.4s;
+	transform: scale(0.9);
+}
+
+.link {
+	background-color: #ff0088;
+}
+
+.main {
+	float: left;
+	width: 80%;
+	padding: 10px;
+}
+
+.right {
+	background-color: #a9a9a9;
+	color: #ffffff;
+	float: left;
+	width: 20%;
+	padding: 15px;
+	margin-top: 7px;
+	text-align: center;
+}
+
+.tb-center {
+	margin-left: auto;
+	margin-right: auto;
+	padding: 15px;
+}
+
+.tb-link {
+	margin-left: 1%;
+	margin-right: -5%;
+	padding: 15px;
+}
+
+table, th, td {
+	border: 2px solid black;
+	padding: 10px;
+}
+
+#table_01 {
+	width: 100%;
+}
+		
+@media only screen and (max-width: 620px) {
+	/* For mobile phones: */
+		.menu, .main, .right {
+		width: 100%;
+	}
+}
+
+@font-face{
+    font-family: 'Digital-7';
+    src:  url('fonts/digital-7.ttf') format('woff2'),
+    url('digital-7.woff') format('woff');
+}
+
+.clockdate-wrapper {
+    background-color: #333;
+    padding: 26px;
+    max-width: 287px;
+    width: 80%;
+    text-align: center;
+    border-radius: 5px;
+    margin: 0 auto;
+	float: right;
+	margin-top: 22px;
+}
+
+#clock {
+    background-color: #333;
+    font-family: Digital-7, 'sans-serif';
+    font-size: 47px;
+    text-shadow: 0px 0px 1px #fff;
+    color: #fff;
+}
+
+#clock span {
+    color: #888;
+    text-shadow: 0px 0px 1px #333;
+    font-size: 28px;
+    position: relative;
+    top: -5px;
+    left: 10px;
+}
+
+#date {
+    letter-spacing: 3px;
+    font-size: 14px;
+    font-family: arial,sans-serif;
+    color: #fff;
+}
